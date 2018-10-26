@@ -108,9 +108,7 @@
 /* 自定制 video uri */
 @property(nonatomic, strong)NSArray *videoUri;
 
-
 /** 使用会中管理功能 */
-
 @property(nonatomic, weak)id <ZJVideoManagerDelegate> delegate ;
 
 /** 实现功能 : 切换本端音频
@@ -123,16 +121,6 @@
  */
 - (void)toggleLocalVideo;
 
-/** 实现功能 : 开启／关闭本端视频
- *  关闭显示本地视频，且远端不能接受到视频。
- */
-- (void)toggleVideo;
-
-/** 实现功能 : 切换摄像头
- *  设备前后摄像头切换
- */
-- (void)toggleCamera;
-
 /** 实现功能 : 退出当前会议室
  *  本地参会者退出
  */
@@ -143,6 +131,11 @@
  */
 - (void)endAllMeeting;
 
+/** 实现功能 : 切换摄像头
+ *  设备前后摄像头切换
+ */
+- (void)toggleCamera;
+
 /** 实现功能 : 邀请参会者入会
  *  param account 用户账号
  *  param role 入会身份
@@ -151,6 +144,25 @@
 - (void)inviteUserAccount:(NSString *)account
                  withRole:(InviteParticipantRole )role
              withProtocol:(InviteParticipantProtocol )protocol;
+
+/** 开启、关闭网络丢包
+ *  @param open 是否开启网络丢包检测
+ */
+- (void)switchObtainPacketLoss:(BOOL)open;
+
+/** 发送文字信息
+ *  message : 文字信息
+ */
+- (void)sendMessage:(NSString *)message ;
+
+
+
+
+
+/** 实现功能 : 开启／关闭本端视频
+ *  关闭显示本地视频，且远端不能接受到视频。
+ */
+- (void)toggleVideo;
 
 /** 静音全部访客 */
 - (void)muteAllGuest;
@@ -217,17 +229,6 @@
  */
 - (void)updateLayout: (NSString *)hlayout
               withG: (NSString *)glayout;
-
-/** 开启、关闭网络丢包
- *  @param open 是否开启网络丢包检测
- */
-- (void)switchObtainPacketLoss:(BOOL)open;
-
-/** 发送文字信息
- *  message : 文字信息
- */
-- (void)sendMessage:(NSDictionary *)message ;
-
 
 /**
  *  Deprecated

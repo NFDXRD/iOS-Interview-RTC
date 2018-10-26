@@ -57,6 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)receiveMessage: (NSDictionary *)message;
 
+- (void)videoChangeStatus: (BOOL )open ;
 
 @end
 

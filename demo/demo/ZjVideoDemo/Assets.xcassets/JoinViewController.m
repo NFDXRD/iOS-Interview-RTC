@@ -15,15 +15,7 @@
     VideoViewController *videoVC;
 }
 @property (weak, nonatomic) IBOutlet UITextField *sipkeyTf;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTf;
-@property (weak, nonatomic) IBOutlet UITextField *apiServerTf;
 @property (weak, nonatomic) IBOutlet UITextField *displayNameTf;
-@property (weak, nonatomic) IBOutlet UITextField *inBandTf;
-@property (weak, nonatomic) IBOutlet UITextField *outBandtf;
-@property (weak, nonatomic) IBOutlet UITextField *minWidth;
-@property (weak, nonatomic) IBOutlet UITextField *minHeightTf;
-@property (weak, nonatomic) IBOutlet UITextField *expectedWidth;
-@property (weak, nonatomic) IBOutlet UITextField *expectedHeight;
 @property (nonatomic, strong) ZjRCTManager *manager;
 
 @end
@@ -34,19 +26,18 @@
     [super viewDidLoad];
     self.manager = [ZjRCTManager sharedManager];
     self.manager.delegate = self;
-    [self.manager setApiServer:self.apiServerTf.text];
+    [self.manager setApiServer:@"cs.zijingcloud.com"];
 }
 
-- (IBAction)clickJoinCostum:(id)sender {
-    
+- (IBAction)clickJoinDefult:(id)sender {
     NSMutableDictionary *conferenceModel = [NSMutableDictionary dictionary];
     [conferenceModel ZJSDKVideoInterview:self.sipkeyTf.text
                              displayName:self.displayNameTf.text];
-    NSLog(@"入会参数： -- %@",conferenceModel);
-
+    
     [self.manager selectReceiveVideoModel:ReceiveVideoModelSimulcast];
     
-    [self.manager connectWithModel:conferenceModel andCapacity:ConncetCapacityModelHost];
+    [self.manager connectWithModel:conferenceModel
+                       andCapacity:ConncetCapacityModelHost];
     
     videoVC = [[VideoViewController alloc]init];
     self.manager.conferenceView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width);
@@ -55,27 +46,37 @@
     [self presentViewController:videoVC animated:NO completion:nil];
 }
 
-- (void)click{
+- (IBAction)clickJoinCostum:(id)sender {
     
+    NSMutableDictionary *conferenceModel = [NSMutableDictionary dictionary];
+    [conferenceModel ZJSDKVideoInterview:self.sipkeyTf.text
+                             displayName:self.displayNameTf.text];
+    
+    [self.manager selectReceiveVideoModel:ReceiveVideoModelSimulcast];
+    
+    [self.manager connectWithModel:conferenceModel
+                       andCapacity:ConncetCapacityModelHost];
+    
+    videoVC = [[VideoViewController alloc]init];
+    self.manager.conferenceView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width);
+    [videoVC.view addSubview:self.manager.conferenceView];
+    
+    [self presentViewController:videoVC animated:NO completion:nil];
 }
 
--(void)zjOutofConference{
-    
+- (void)receiveMessage:(NSDictionary *)message {
+    NSLog(@"接收到发来的信息: %@",message);
 }
 
--(void)zjCallFalidMessage:(NSString *)reason{
-    
+- (void)changeParticipants:(NSArray *)participants {
+    NSLog(@"当前与会者信息%@",participants);
 }
 
--(void)zjLogPercentageLost:(NSDictionary *)packet{
-    
+- (void)videoChangeStatus:(BOOL)open {
+    NSLog(@"语音状态%@", (open ? @"打开" : @"关闭") );
 }
 
--(void)zjCallBackWithState:(ZJSDKCallState)state
-                withReason:(NSString *)reason
-                  withUUID:(NSString *)uuid{
-    
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

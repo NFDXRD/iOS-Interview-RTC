@@ -9,6 +9,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#include "WebRTC/RTCMacros.h"
 
 typedef NS_ENUM(NSInteger, RTCDeviceType) {
   RTCDeviceTypeUnknown,
@@ -61,5 +62,7 @@ typedef NS_ENUM(NSInteger, RTCDeviceType) {
 + (NSString *)stringForDeviceType:(RTCDeviceType)deviceType;
 + (BOOL)isIOS9OrLater;
 + (BOOL)isIOS11OrLater;
-extern bool isIOS11OrLater();
+RTC_EXTERN bool isIOS11OrLater();
 @end
+
+

@@ -14,9 +14,10 @@
 		1C1EB7CE1F5808B100588070 /* ZjVideoDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C1EB7CC1F5808B100588070 /* ZjVideoDemo.xcdatamodeld */; };
 		1C1EB7D01F5808B100588070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C1EB7CF1F5808B100588070 /* Assets.xcassets */; };
 		1C1EB7D31F5808B100588070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1EB7D11F5808B100588070 /* LaunchScreen.storyboard */; };
+		1C2951FD2181A8BF005E38D2 /* ZjVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C403F41217DD516002665C4 /* ZjVideo.framework */; };
+		1C2951FE2181A8BF005E38D2 /* ZjVideo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C403F41217DD516002665C4 /* ZjVideo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C2951FF2181A8D5005E38D2 /* ZjVideo.framework in Sources */ = {isa = PBXBuildFile; fileRef = 1C403F41217DD516002665C4 /* ZjVideo.framework */; };
 		1C403F42217DD516002665C4 /* ZjVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C403F41217DD516002665C4 /* ZjVideo.framework */; };
-		1C403F43217DD523002665C4 /* ZjVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C403F41217DD516002665C4 /* ZjVideo.framework */; };
-		1C403F44217DD523002665C4 /* ZjVideo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C403F41217DD516002665C4 /* ZjVideo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C8577B81FE3C6110086E053 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8577B71FE3C6110086E053 /* VideoViewController.m */; };
 		1C8E612120207B4B00DDA617 /* RTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E612020207B4B00DDA617 /* RTViewController.m */; };
 		1C8E612820207DCA00DDA617 /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E612620207DCA00DDA617 /* JoinViewController.m */; };
@@ -34,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C403F44217DD523002665C4 /* ZjVideo.framework in Embed Frameworks */,
+				1C2951FE2181A8BF005E38D2 /* ZjVideo.framework in Embed Frameworks */,
 				1CA874E21F720CB80037E12C /* WebRTC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -80,7 +81,7 @@
 			files = (
 				1C403F42217DD516002665C4 /* ZjVideo.framework in Frameworks */,
 				1CA874E11F720CB80037E12C /* WebRTC.framework in Frameworks */,
-				1C403F43217DD523002665C4 /* ZjVideo.framework in Frameworks */,
+				1C2951FD2181A8BF005E38D2 /* ZjVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2951FF2181A8D5005E38D2 /* ZjVideo.framework in Sources */,
 				1C8E612820207DCA00DDA617 /* JoinViewController.m in Sources */,
 				1C8E613E202156AC00DDA617 /* PTPViewController.m in Sources */,
 				1C8577B81FE3C6110086E053 /* VideoViewController.m in Sources */,
@@ -330,6 +332,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Debug;
 		};
@@ -372,6 +375,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Release;
 		};
@@ -387,6 +391,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZjVideoDemo",
+					"$(PROJECT_DIR)/ZjVideoDemo/ZjVideo.framework",
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ZjVideoDemo/ZjVideo.framework/Headers";
 				INFOPLIST_FILE = ZjVideoDemo/Info.plist;
@@ -415,6 +420,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZjVideoDemo",
+					"$(PROJECT_DIR)/ZjVideoDemo/ZjVideo.framework",
 				);
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ZjVideoDemo/ZjVideo.framework/Headers";
 				INFOPLIST_FILE = ZjVideoDemo/Info.plist;

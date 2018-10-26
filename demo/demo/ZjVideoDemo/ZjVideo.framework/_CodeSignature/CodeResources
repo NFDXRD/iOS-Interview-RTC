@@ -578,11 +578,11 @@
 		</data>
 		<key>Headers/ZJVideoManagerDelegate.h</key>
 		<data>
-		f2TNhHmBY8qnNz4ikp5phnX+4qw=
+		XxYhqTfsMJ5dK6LpE+gm0D11COw=
 		</data>
 		<key>Headers/ZjRCTManager.h</key>
 		<data>
-		P4A7Y0Eyf6XHgMuJWdf1ZxCdGBs=
+		yS1JOYmU8uA97xUIWleV+n9Xs/A=
 		</data>
 		<key>Headers/ZjVideo.h</key>
 		<data>
@@ -614,7 +614,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6neAOCtROn388vEfHpowAN5BI4k=
+		WJJXbaf/pjnEk9zYMuqPgNWR7wU=
 		</data>
 		<key>MaterialIcons.ttf</key>
 		<data>
@@ -994,6 +994,10 @@
 		<data>
 		Gfny1dt3LKDQyo3kbKBBCkqTF0g=
 		</data>
+		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/icon_mine.png</key>
+		<data>
+		OGCTsS5Vh4pJVBnEDkC9KRI4rZQ=
+		</data>
 		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/icon_vioce.png</key>
 		<data>
 		8diF2fSoVpt7UwwVah59Q6dVkXM=
@@ -1004,7 +1008,7 @@
 		</data>
 		<key>main.jsbundle</key>
 		<data>
-		oRVC8Hqhvt7Gl2R60Zgpu40GR9U=
+		hMZ0OeXP95Y/fSoDREvEJiybdcI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -2586,22 +2590,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			f2TNhHmBY8qnNz4ikp5phnX+4qw=
+			XxYhqTfsMJ5dK6LpE+gm0D11COw=
 			</data>
 			<key>hash2</key>
 			<data>
-			KPdsuVye1VVtIf9JjR1kthfvG7Vvhul+GH38fsjMm5I=
+			xEb0y4evmjRvf2Hm0AOZCy1Byfkx52S03BWEGcRbFj4=
 			</data>
 		</dict>
 		<key>Headers/ZjRCTManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			P4A7Y0Eyf6XHgMuJWdf1ZxCdGBs=
+			yS1JOYmU8uA97xUIWleV+n9Xs/A=
 			</data>
 			<key>hash2</key>
 			<data>
-			Jffe1PPJRj9M+gAWn0RksTiH6+Rzr2JxpQWdyxp43oA=
+			IFzfUU8t20mXNEqaMHOZ5wG4JtxdVu/Po6iMcjI1+fU=
 			</data>
 		</dict>
 		<key>Headers/ZjVideo.h</key>
@@ -3697,6 +3701,17 @@
 			GiknYH8cJ3hKCTVcfb2cUlgA05YpTBm8/msmKlmfuso=
 			</data>
 		</dict>
+		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/icon_mine.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OGCTsS5Vh4pJVBnEDkC9KRI4rZQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			lNcZ72NcXvqfm4UGov53xa1qT8wrxx8fTI6Zn5qymac=
+			</data>
+		</dict>
 		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/icon_vioce.png</key>
 		<dict>
 			<key>hash</key>
@@ -3723,11 +3738,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oRVC8Hqhvt7Gl2R60Zgpu40GR9U=
+			hMZ0OeXP95Y/fSoDREvEJiybdcI=
 			</data>
 			<key>hash2</key>
 			<data>
-			9zO2aDmdosnV/GmpyVw4jt8rGrTh4m5Oftx/jj/io6Y=
+			rkFeTAxIXEQ9wHvvQCteB60WhJfOND7E1mrbXpmPZpk=
 			</data>
 		</dict>
 	</dict>
