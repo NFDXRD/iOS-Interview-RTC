@@ -72,6 +72,11 @@ typedef NS_ENUM(NSInteger, ConncetCapacityModel) {
   ConncetCapacityModelGuest = 1 // 面试者
 };
 
+typedef NS_ENUM(NSInteger, ConferenceCameraStatus) {
+  ConferenceCameraStatusFront = 0, // 前摄像头
+  ConferenceCameraStatusBack = 1 // 后摄像头
+};
+
 typedef void(^ZJVideoSDKCompletionHandler) (NSData *  data,NSURLResponse *  response,NSError *  error);
 
 #endif /* ZJSDKTypeDefine_h */

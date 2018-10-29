@@ -35,28 +35,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)changeConference: (NSDictionary *)conferenceInfo;
 
-/* 会中布局出现变化时，回调此方法
- * param layoutInfo : 会议布局信息
- */
-- (void)changeLayout: (NSDictionary *)layoutInfo;
-
-/* 会中出现录制直播的变化时，回调此方法
- * param recorderInfo : 会议录制/直播信息
- */
-- (void)changeLivingRecord: (NSDictionary *)recorderInfo;
 
 /** 返回会中的信息 */
 /** 获取会中丢包信息
- * param packet : 音视频丢包信息
+ *  param packet : 音视频丢包信息
  */
 - (void)packetLoss: (NSDictionary *)packet;
 
-/** 返回会中的信息 */
-/** 获取会中丢包信息
- * param packet : 音视频丢包信息
+/** 接收文字消息
+ *  param packet : 文字消息
  */
 - (void)receiveMessage: (NSDictionary *)message;
 
+/** 本地语音/视频模式发生切换
+ *  param open : 是否为视频状态
+ */
 - (void)videoChangeStatus: (BOOL )open ;
 
 @end

@@ -56,11 +56,7 @@
                                        videoSize:minSize
                                     expectedSize:expectedSize];
     NSLog(@"视频参数： -- %@",videoParams);
-    
-    [self.manager connectWithModel:conferenceModel
-                       videoParams:videoParams
-                  showFunctionItem:YES
-                isAutoPrePresentVC:YES];
+
     
 //    [self.manager connectTarget:self.NumberTf.text
 //                         name:self.DisplayName.text
@@ -97,11 +93,7 @@
                                     expectedSize:expectedSize];
     NSLog(@"视频参数： -- %@",videoParams);
     
-    [self.manager connectWithModel:conferenceModel
-                       videoParams:videoParams
-                  showFunctionItem:YES
-                isAutoPrePresentVC:NO];
-    
+
 //    [self.manager connectTarget:self.NumberTf.text
 //                          name:self.DisplayName.text
 //                      password:self.PwdTf.text

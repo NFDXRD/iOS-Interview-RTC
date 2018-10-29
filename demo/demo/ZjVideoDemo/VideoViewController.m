@@ -110,11 +110,11 @@ NSString *const JoinConferenceFooterId = @"JoinConferenceFooterId";
     NSInteger tag = btn.tag ;
     
     if ( tag == 0 ) {
-        [self.manager toggleLocalAudio];
+        [self.manager toggleLocalAudio:!self.manager.openAudio];
     } else if ( tag == 1 ) {
-        [self.manager toggleLocalVideo];
+        [self.manager toggleLocalVideo:!self.manager.openVideo];
     } else if ( tag == 2 ) {
-        [self.manager toggleCamera];
+        [self.manager toggleCamera:( self.manager.cameraStatus == ConferenceCameraStatusBack ? ConferenceCameraStatusFront : ConferenceCameraStatusBack )];
     } else if ( tag == 3 ) {
         [self.manager outOfCurrentMeeting];
     } else if ( tag == 4 ) {

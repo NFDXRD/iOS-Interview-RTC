@@ -98,11 +98,7 @@ NSString *const REJECTEDCALL = @"REJECTEDCALL";
                                        videoSize:minSize
                                     expectedSize:expectedSize];
     NSLog(@"视频参数： -- %@",videoParams);
-    
-    [self.manager connectWithModel:conferenceModel
-                       videoParams:videoParams
-                  showFunctionItem:YES
-                isAutoPrePresentVC:YES];
+
 }
 - (IBAction)huClick:(id)sender {
     [self.manager callRejectWithAccount:self.incommingDict[@"conference_alias"] withToken:self.incommingDict[@"token"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

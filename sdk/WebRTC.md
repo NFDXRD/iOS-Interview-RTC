@@ -12,3 +12,7 @@ WebRTC.framework 是iOS端Obective-C版本Framework。WebRTC.framework 是主要
 ### 更新说明: 
 #### 添加模拟机x86 的架构。
 
+# v1.0.2
+### 更新说明
+#### 调摄像头转向。
+

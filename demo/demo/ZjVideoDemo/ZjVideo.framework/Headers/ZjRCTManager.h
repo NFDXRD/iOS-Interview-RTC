@@ -39,26 +39,6 @@
 - (void)connectWithModel:(NSDictionary *)conferenceModel
              andCapacity:(ConncetCapacityModel )modelType ;
 
-/** 加入会议
- *  @param conferenceModel  : 加入会议的参数设置（必填参数，密码为空时，可传空字符串）
- *  @param isShow           : 是否显示功能按钮（静音，静画，切换摄像头等）
- *  @param isAuto           : 是否自动跳转到控制器
- */
-- (void)connectWithModel:(NSDictionary *)conferenceModel
-        showFunctionItem:(BOOL)isShow
-      isAutoPrePresentVC:(BOOL)isAuto;
-
-/** 加入会议
- *  @param conferenceModel  : 加入会议的参数设置（必填参数，密码为空时，可传空字符串）
- *  @param params           : 通话质量的参数设置（非必填参数，传空字典类型，使用默认值）
- *  @param isShow           : 是否显示功能按钮（静音，静画，切换摄像头等）
- *  @param isAuto           : 是否自动跳转到控制器
- */
-- (void)connectWithModel:(NSDictionary *)conferenceModel
-             videoParams:(NSDictionary *)params
-        showFunctionItem:(BOOL)isShow
-      isAutoPrePresentVC:(BOOL)isAuto;
-
 /* 会中界面 */
 @property(nonatomic, strong)UIView *conferenceView;
 
@@ -108,18 +88,30 @@
 /* 自定制 video uri */
 @property(nonatomic, strong)NSArray *videoUri;
 
+
+
+
 /** 使用会中管理功能 */
+/** 会中参数变化时,返回当前参数状态 */
 @property(nonatomic, weak)id <ZJVideoManagerDelegate> delegate ;
 
 /** 实现功能 : 切换本端音频
  *  静音本地，远端收不到本端音频。
+ *  param openAudio : 是否打开音频
+ *  return : 是否设置成功
  */
-- (void)toggleLocalAudio;
+- (BOOL )toggleLocalAudio:(BOOL )openAudio;
+
+@property(nonatomic, assign)BOOL openAudio ;
 
 /** 实现功能 : 切换本端视频
  *  关闭显示本地视频，但远端仍然能接受到视频。
+ *  param openAudio : 是否打开视频
+ *  return : 是否设置成功
  */
-- (void)toggleLocalVideo;
+- (BOOL )toggleLocalVideo:(BOOL )openVideo;
+
+@property(nonatomic, assign)BOOL openVideo ;
 
 /** 实现功能 : 退出当前会议室
  *  本地参会者退出
@@ -133,8 +125,12 @@
 
 /** 实现功能 : 切换摄像头
  *  设备前后摄像头切换
+ *  param cameraStatus : 前后摄像头
+ *  return : 是否设置成功
  */
-- (void)toggleCamera;
+- (BOOL )toggleCamera:(ConferenceCameraStatus) cameraStatus;
+
+@property(nonatomic, assign) ConferenceCameraStatus cameraStatus ;
 
 /** 实现功能 : 邀请参会者入会
  *  param account 用户账号
@@ -154,109 +150,5 @@
  *  message : 文字信息
  */
 - (void)sendMessage:(NSString *)message ;
-
-
-
-
-
-/** 实现功能 : 开启／关闭本端视频
- *  关闭显示本地视频，且远端不能接受到视频。
- */
-- (void)toggleVideo;
-
-/** 静音全部访客 */
-- (void)muteAllGuest;
-
-/** 锁定当前会议 */
-- (void)lockCurConference;
-
-/** 退出会议 */
-- (void)disconnectConference;
-
-/** 结束本次会议 */
-- (void)disconnectAllConference;
-
-/** 允许指定与会者参加会议
- *  @param Participant 指定与会者
- */
-- (void)answerParticipant: (NSDictionary *)Participant;
-
-/** 拒绝指定与会者参加会议
- *  @param Participant 指定与会者
- */
-- (void)refuseParticipant: (NSDictionary *)Participant;
-
-/** 取消邀请指定与会者  (遇到出现的问题，暂不可用)
- *  @param Participant 指定与会者
- */
-- (void)cancelParticipant: (NSDictionary *)Participant;
-
-/** 改变指定与会者显示名称
- *  @param Participant 指定与会者
- *  @param name 变化之后的名称
- */
-- (void)changeParticipant: (NSDictionary *)Participant
-                withName: (NSString *)name;
-
-/** 移除指定与会者
- *  @param Participant 指定与会者
- */
-- (void)removeParticipant: (NSDictionary *)Participant;
-
-/** 静音指定与会者
- *  @param Participant 指定与会者
- */
-- (void)muteParticipant: (NSDictionary *)Participant;
-
-/** 改变指定与会者身份
- *  @param Participant 指定与会者
- */
-- (void)transferParticipant: (NSDictionary *)Participant;
-
-/** 开启录制
- *  @param isRecord 是否开启录制
- */
-- (void)startRecord: (BOOL)isRecord;
-
-/** 开启直播
- *  @param isLiving 是否开启直播
- */
-- (void)startLiving: (BOOL)isLiving;
-
-/** 更新布局
- *  @param hlayout 主持人布局
- *  @param glayout 访客布局
- */
-- (void)updateLayout: (NSString *)hlayout
-              withG: (NSString *)glayout;
-
-/**
- *  Deprecated
- *  加入会议室
- *  @param target        : 会议室的短号或者长地址
- *  @param name          : 入会显示名称
- *  @param pwd           : 入会密码
- *  @param server        : 接口地址
- *  @param input         : 接受速率
- *  @param output        : 发送速率
- *  @param minFps        : 发送帧率
- *  @param expectedFps   : 接受帧率
- *  @param videoSize     : 发送分辨率
- *  @param expectedSize  : 接受分辨率
- *  @param isShow        : 是否显示功能按钮（静音，静画，切换摄像头等）
- *  @param isAuto        : 是否自动跳转到控制器
- */
-- (void)connectTarget:(NSString *)target
-                 name:(NSString *)name
-             password:(NSString *)pwd
-            apiServer:(NSString *)server
-          bandwidthIn:(NSInteger )input
-         bandwidthOut:(NSInteger )output
-               minFps:(NSInteger)minFps
-          expectedFps:(NSInteger)expectedFps
-            videoSize:(struct ZJVideoSize)videoSize
-         expectedSize:(struct ZJVideoSize)expectedSize
-     showFunctionItem:(BOOL )isShow
-   isAutoPrepresentVC:(BOOL )isAuto;
 
 @end
