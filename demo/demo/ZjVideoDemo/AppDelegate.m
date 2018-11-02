@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <PushKit/PushKit.h>
 #import "RTViewController.h"
+#import "ZjRCTManager.h"
+#import "UncaughtExceptionHandler.h"
 
 @interface AppDelegate ()<PKPushRegistryDelegate>
 @property (nonatomic, strong)RTViewController *rootVc;
@@ -19,6 +21,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    InstallUncaughtExceptionHandler();
     
     self.voipRegistry = [[PKPushRegistry alloc]initWithQueue:dispatch_get_main_queue()];
     self.voipRegistry.desiredPushTypes = [NSSet setWithObject:PKPushTypeVoIP];
@@ -72,8 +76,12 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    // Saves changes in the application's managed object context before the application terminates.
+    
+//    ZjRCTManager *manager = [ZjRCTManager sharedManager] ;
+//    if (manager.isMeeting) {
+//        [[ZjRCTManager sharedManager] outOfCurrentMeeting];
+//    }
+//    
     [self saveContext];
 }
 

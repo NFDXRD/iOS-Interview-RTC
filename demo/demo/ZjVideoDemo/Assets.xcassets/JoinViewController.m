@@ -31,13 +31,22 @@
 
 - (IBAction)clickJoinDefult:(id)sender {
     NSMutableDictionary *conferenceModel = [NSMutableDictionary dictionary];
+//    [conferenceModel ZJSDKVideoInterview:self.sipkeyTf.text
+//                             displayName:self.displayNameTf.text];
+    
     [conferenceModel ZJSDKVideoInterview:self.sipkeyTf.text
-                             displayName:self.displayNameTf.text];
+                             displayName:self.displayNameTf.text
+                                password:@"123456"
+                                checkdup:@"12345657890"];
     
     [self.manager selectReceiveVideoModel:ReceiveVideoModelSimulcast];
     
+    //  或者按照 makedown中提示。
+    [self.manager openAppTerminateListening];
+    
     [self.manager connectWithModel:conferenceModel
                        andCapacity:ConncetCapacityModelHost];
+    
     
     videoVC = [[VideoViewController alloc]init];
     self.manager.conferenceView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width);
@@ -54,8 +63,10 @@
     
     [self.manager selectReceiveVideoModel:ReceiveVideoModelSimulcast];
     
+    
+    
     [self.manager connectWithModel:conferenceModel
-                       andCapacity:ConncetCapacityModelHost];
+                       andCapacity:ConncetCapacityModelGuest];
     
     videoVC = [[VideoViewController alloc]init];
     self.manager.conferenceView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width);

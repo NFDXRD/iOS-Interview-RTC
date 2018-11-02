@@ -151,4 +151,21 @@
  */
 - (void)sendMessage:(NSString *)message ;
 
+/** 发送文字信息
+ *  isMeeting : 文字信息
+ */
+@property(nonatomic, assign) BOOL isMeeting ;
+
+/** 开启入会监听“异常退出”事件   主要目的: 程序异常时，正常离开会议
+ *  因为此处为 添加收集Crash的方法，一般在程序里有添加，有添加的在收集处，调用正常退出会议的接口即可。
+ *  所以看App情况使用
+ */
+- (void)openAbnormalListening;
+
+/** 开启入会监听"程序退出"事件   主要目的：程序退出时，正常离开会议 */
+- (void)openAppTerminateListening ;
+
+/** 关闭入会监听”异常退出“事件 */
+- (void)closeAppTerminateListening ;
+
 @end

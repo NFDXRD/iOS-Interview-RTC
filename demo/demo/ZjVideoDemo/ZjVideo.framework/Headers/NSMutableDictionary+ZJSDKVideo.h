@@ -14,9 +14,34 @@
 /**
  *  参加面试的时候需要的参数 可改变入会方式 （必须赋值的参数）
  *  @param target      : 入会长地址／短号
+ *  @param displayName : 显示名称
  */
 - (void)ZJSDKVideoInterview: (NSString *)target
                 displayName: (NSString *)displayName;
+
+/**
+ *  参加面试的时候需要的参数 可改变入会方式 （必须赋值的参数）
+ *  @param target      : 入会长地址／短号
+ *  @param displayName : 显示名称
+ *  @param pwd : 入会密码
+ */
+- (void)ZJSDKVideoInterview: (NSString *)target
+                displayName: (NSString *)displayName
+                   password: (NSString *)pwd;
+
+/**
+ *  参加面试的时候需要的参数 可改变入会方式 （必须赋值的参数）
+ *  @param target      : 入会长地址／短号
+ *  @param displayName : 显示名称
+ *  @param pwd : 入会密码
+ *  @param checkdup : 本设备入会唯一标识
+ *  checkdup 规则 : uuid - 唯一设备标识（唯一即可） displayname - 显示名称
+    格式 ： uuid_displayname 进行md5加密
+ */
+- (void)ZJSDKVideoInterview: (NSString *)target
+                displayName: (NSString *)displayName
+                   password: (NSString *)pwd
+                   checkdup: (NSString *)checkdup;
 
 /**
  *  加入会议的时候需要的参数  快速入会 （必须赋值的参数）

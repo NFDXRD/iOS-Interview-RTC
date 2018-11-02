@@ -18,6 +18,7 @@
 		1C2951FE2181A8BF005E38D2 /* ZjVideo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C403F41217DD516002665C4 /* ZjVideo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C2951FF2181A8D5005E38D2 /* ZjVideo.framework in Sources */ = {isa = PBXBuildFile; fileRef = 1C403F41217DD516002665C4 /* ZjVideo.framework */; };
 		1C403F42217DD516002665C4 /* ZjVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C403F41217DD516002665C4 /* ZjVideo.framework */; };
+		1C4E2056218C4193009B5E24 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E2055218C4193009B5E24 /* UncaughtExceptionHandler.m */; };
 		1C8577B81FE3C6110086E053 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8577B71FE3C6110086E053 /* VideoViewController.m */; };
 		1C8E612120207B4B00DDA617 /* RTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E612020207B4B00DDA617 /* RTViewController.m */; };
 		1C8E612820207DCA00DDA617 /* JoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E612620207DCA00DDA617 /* JoinViewController.m */; };
@@ -60,6 +61,8 @@
 		1C1EB7E81F5808B200588070 /* ZjVideoDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZjVideoDemoUITests.m; sourceTree = "<group>"; };
 		1C1EB7EA1F5808B200588070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C403F41217DD516002665C4 /* ZjVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZjVideo.framework; sourceTree = "<group>"; };
+		1C4E2054218C4193009B5E24 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		1C4E2055218C4193009B5E24 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		1C8577B61FE3C6110086E053 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		1C8577B71FE3C6110086E053 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		1C8E611F20207B4B00DDA617 /* RTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTViewController.h; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				1C1EB7C41F5808B100588070 /* AppDelegate.m */,
 				1C8E611F20207B4B00DDA617 /* RTViewController.h */,
 				1C8E612020207B4B00DDA617 /* RTViewController.m */,
+				1C4E2054218C4193009B5E24 /* UncaughtExceptionHandler.h */,
+				1C4E2055218C4193009B5E24 /* UncaughtExceptionHandler.m */,
 				1C8E612520207DCA00DDA617 /* JoinViewController.h */,
 				1C8E612620207DCA00DDA617 /* JoinViewController.m */,
 				1C8E612720207DCA00DDA617 /* JoinViewController.xib */,
@@ -254,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C2951FF2181A8D5005E38D2 /* ZjVideo.framework in Sources */,
+				1C4E2056218C4193009B5E24 /* UncaughtExceptionHandler.m in Sources */,
 				1C8E612820207DCA00DDA617 /* JoinViewController.m in Sources */,
 				1C8E613E202156AC00DDA617 /* PTPViewController.m in Sources */,
 				1C8577B81FE3C6110086E053 /* VideoViewController.m in Sources */,

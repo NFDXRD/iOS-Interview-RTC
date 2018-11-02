@@ -43,11 +43,22 @@ ZjVideo.framework 是iOS端Obective-C版本Framework。ZjVideo.framework 是搭�
 
 # v1.1.3
 ### 更新说明
-#### 接口重构已经bug解决
+#### 接口重构以及bug解决
 ##### (1)本地静音/解除静音。 
 ##### (2)本地静画/解除静画。 （已解决存在的bug）
 ##### (3)切换摄像头。
 ##### (4)已解决显示名称Bug。
+
+# v1.1.4
+### 更新说明
+#### 接口重构以及bug解决
+##### (1)添加多参数入会接口（可选）。
+##### (2)修改小窗的自适应宽度方式。
+##### (3)添加程序退出时，异常情况下的未退出会议，正常退出会议的方法。
+##### (4)修改小窗初始时显示身份错误。
+### 注：
+##### (1)在demo中添加了 appdelegate中applicationWillTerminate 正常退出会议的方法。
+##### (2)在demo中添加了 appdelegate中didFinishLaunchingWithOptions 添加了抓取Crash的方法。
 
 
 
