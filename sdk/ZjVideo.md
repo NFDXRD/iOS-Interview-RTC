@@ -60,6 +60,13 @@ ZjVideo.framework 是iOS端Obective-C版本Framework。ZjVideo.framework 是搭�
 ##### (1)在demo中添加了 appdelegate中applicationWillTerminate 正常退出会议的方法。
 ##### (2)在demo中添加了 appdelegate中didFinishLaunchingWithOptions 添加了抓取Crash的方法。
 
+# v1.1.5 
+### 更新说明
+#### 接口添加
+##### （1）添加代理方法 localParticipant 获取本地参会者信息，第一次会在成功进入会议室时调用。
+##### （2）添加属性直接获取参会者信息，在成功进入会议后，此参数才有效。
+
+
 
 
 

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZJVideoManagerDelegate <NSObject>
 
+
+@optional 
 // 加入会议失败
 - (void)joinConferenceFaild: (int)nCode;
 
@@ -35,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)changeConference: (NSDictionary *)conferenceInfo;
 
+
+- (void)localParticipant : (NSDictionary *)localParticipant;
 
 /** 返回会中的信息 */
 /** 获取会中丢包信息

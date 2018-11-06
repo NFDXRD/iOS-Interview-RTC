@@ -9,7 +9,7 @@
 #import "VideoViewController.h"
 #import "ZjRCTManager.h"
 
-@interface VideoViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface VideoViewController () <UICollectionViewDelegate,UICollectionViewDataSource,ZJVideoManagerDelegate>
 
 @property (nonatomic, strong) NSArray *btns ;
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -111,6 +111,7 @@ NSString *const JoinConferenceFooterId = @"JoinConferenceFooterId";
     
     if ( tag == 0 ) {
         [self.manager toggleLocalAudio:!self.manager.openAudio];
+        NSLog(@"------> %d", self.manager.openAudio);
     } else if ( tag == 1 ) {
         [self.manager toggleLocalVideo:!self.manager.openVideo];
     } else if ( tag == 2 ) {
@@ -176,6 +177,5 @@ NSString *const JoinConferenceFooterId = @"JoinConferenceFooterId";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
 }
-
 
 @end

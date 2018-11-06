@@ -89,8 +89,6 @@
 @property(nonatomic, strong)NSArray *videoUri;
 
 
-
-
 /** 使用会中管理功能 */
 /** 会中参数变化时,返回当前参数状态 */
 @property(nonatomic, weak)id <ZJVideoManagerDelegate> delegate ;
@@ -112,6 +110,10 @@
 - (BOOL )toggleLocalVideo:(BOOL )openVideo;
 
 @property(nonatomic, assign)BOOL openVideo ;
+
+/* 本地的参会者信息 */
+@property(nonatomic, strong)NSDictionary *localParticipant ;
+
 
 /** 实现功能 : 退出当前会议室
  *  本地参会者退出

@@ -36,8 +36,7 @@
     
     [conferenceModel ZJSDKVideoInterview:self.sipkeyTf.text
                              displayName:self.displayNameTf.text
-                                password:@"123456"
-                                checkdup:@"12345657890"];
+                                password:@"123456" checkdup:@""];
     
     [self.manager selectReceiveVideoModel:ReceiveVideoModelSimulcast];
     
@@ -87,6 +86,9 @@
     NSLog(@"语音状态%@", (open ? @"打开" : @"关闭") );
 }
 
+- (void)localParticipant:(NSDictionary *)localParticipant {
+    NSLog(@"本地参会者改变 --- %@",localParticipant);
+}
 
 
 - (void)didReceiveMemoryWarning {
