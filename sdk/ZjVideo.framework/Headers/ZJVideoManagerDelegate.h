@@ -12,16 +12,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZJVideoManagerDelegate <NSObject>
 
+@optional
 
-@optional 
-// 加入会议失败
-- (void)joinConferenceFaild: (int)nCode;
+// 连接会议成功
+- (void)conferenceConncted:(ZJSDKCallState) nCode ;
 
 // 会中出现异常
-- (void)conferenceAbnormal: (int)nCode;
+- (void)conferenceAbnormal: (ZJSDKCallState )nCode abnormalReason:(NSString *)reason;
 
 // 执行退出会议后，回调
-- (void)conferenceDisconnect: (int)nCode;
+- (void)conferenceDisconnect: (ZJSDKCallState )nCode;
+
+/* 打开录制成功/失败
+ * param open    : 打开录制 / 关闭录制
+ * param success : 是否打开成功
+ */
+- (void)conferenceRecoderOpen:(BOOL )open successful:(BOOL )success ;
 
 /* 自动获得参与者
  * 当参与者状态改变时回调此方法。
@@ -37,7 +43,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)changeConference: (NSDictionary *)conferenceInfo;
 
-
+/* 自动获取本地参会者信息
+ * 当会议管理信息发生变化时，回调此方法。
+ * param localParticipant : 本地参会者信息
+ */
 - (void)localParticipant : (NSDictionary *)localParticipant;
 
 /** 返回会中的信息 */
@@ -56,6 +65,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)videoChangeStatus: (BOOL )open ;
 
+/** 本地音频被其它程序占用
+ */
+- (void)audioInterruptionBegan ;
+
+/** 另一程序 结束音频占用
+ * timeInterval
+ */
+- (void)audioInterruptionEndedAnTime:(NSTimeInterval )timeInterval;
 @end
 
 NS_ASSUME_NONNULL_END

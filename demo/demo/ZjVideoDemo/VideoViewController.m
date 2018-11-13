@@ -25,14 +25,14 @@ NSString *const JoinConferenceFooterId = @"JoinConferenceFooterId";
 
 - (NSArray *)btns{
     if (!_btns) {
-        _btns = @[@"静音",@"静画",@"切换摄像头",@"离开",@"全部离开",@"邀请",@"发送消息"];
+        _btns = @[@"静音",@"静画",@"切换摄像头",@"离开",@"全部离开",@"邀请",@"发送消息",@"打开录制",@"关闭录制"];
     }
     return _btns;
 }
 
 - (ZjRCTManager *)manager {
     if (!_manager) {
-        _manager = [ZjRCTManager sharedManager];
+        _manager = [[ZjRCTManager alloc]init];
     }
     return _manager ;
 }
@@ -111,6 +111,7 @@ NSString *const JoinConferenceFooterId = @"JoinConferenceFooterId";
     
     if ( tag == 0 ) {
         [self.manager toggleLocalAudio:!self.manager.openAudio];
+        
         NSLog(@"------> %d", self.manager.openAudio);
     } else if ( tag == 1 ) {
         [self.manager toggleLocalVideo:!self.manager.openVideo];
@@ -118,6 +119,10 @@ NSString *const JoinConferenceFooterId = @"JoinConferenceFooterId";
         [self.manager toggleCamera:( self.manager.cameraStatus == ConferenceCameraStatusBack ? ConferenceCameraStatusFront : ConferenceCameraStatusBack )];
     } else if ( tag == 3 ) {
         [self.manager outOfCurrentMeeting];
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"aaaa" object:nil];
+
+        
+        [self dismissViewControllerAnimated:NO completion:nil];
     } else if ( tag == 4 ) {
         [self.manager endAllMeeting];
     } else if ( tag == 5 ) {
@@ -127,7 +132,9 @@ NSString *const JoinConferenceFooterId = @"JoinConferenceFooterId";
     } else if ( tag == 6 ) {
         [self.manager sendMessage:@"这是发送的消息"];
     } else if ( tag == 7 ) {
-        
+        [self.manager openRecorder];
+    } else if ( tag == 8 ) {
+        [self.manager closeRecorder];
     }
 }
 

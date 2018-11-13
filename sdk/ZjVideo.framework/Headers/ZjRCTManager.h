@@ -170,4 +170,13 @@
 /** 关闭入会监听”异常退出“事件 */
 - (void)closeAppTerminateListening ;
 
+/** 开启录制h功能的地址 */
+@property (nonatomic, strong) NSString *recorderServer ;
+
+/** 打开录制会议 */
+- (void)openRecorder;
+
+/** 关闭录制会议 */
+- (void)closeRecorder;
+
 @end

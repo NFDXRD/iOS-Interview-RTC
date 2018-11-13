@@ -12,10 +12,11 @@
 
 
 @interface JoinViewController ()<ZJVideoManagerDelegate>{
-    VideoViewController *videoVC;
+    
 }
 @property (weak, nonatomic) IBOutlet UITextField *sipkeyTf;
 @property (weak, nonatomic) IBOutlet UITextField *displayNameTf;
+@property (strong, nonatomic) VideoViewController *videoVC;
 @property (nonatomic, strong) ZjRCTManager *manager;
 
 @end
@@ -36,7 +37,9 @@
     
     [conferenceModel ZJSDKVideoInterview:self.sipkeyTf.text
                              displayName:self.displayNameTf.text
-                                password:@"123456" checkdup:@""];
+                                password:@"123456"
+                                checkdup:@""
+                          conferenceSize:4];
     
     [self.manager selectReceiveVideoModel:ReceiveVideoModelSimulcast];
     
@@ -47,31 +50,35 @@
                        andCapacity:ConncetCapacityModelHost];
     
     
-    videoVC = [[VideoViewController alloc]init];
+    self.videoVC = [[VideoViewController alloc]init];
     self.manager.conferenceView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width);
-    [videoVC.view addSubview:self.manager.conferenceView];
-    
-    [self presentViewController:videoVC animated:NO completion:nil];
+    [self.videoVC.view addSubview:self.manager.conferenceView];
+
+    [self presentViewController:self.videoVC animated:NO completion:nil];
 }
 
 - (IBAction)clickJoinCostum:(id)sender {
     
     NSMutableDictionary *conferenceModel = [NSMutableDictionary dictionary];
     [conferenceModel ZJSDKVideoInterview:self.sipkeyTf.text
-                             displayName:self.displayNameTf.text];
+                             displayName:self.displayNameTf.text
+                          conferenceSize:4];
     
     [self.manager selectReceiveVideoModel:ReceiveVideoModelSimulcast];
-    
-    
     
     [self.manager connectWithModel:conferenceModel
                        andCapacity:ConncetCapacityModelGuest];
     
-    videoVC = [[VideoViewController alloc]init];
+    self.videoVC = [[VideoViewController alloc]init];
     self.manager.conferenceView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width);
-    [videoVC.view addSubview:self.manager.conferenceView];
+    [self.videoVC.view addSubview:self.manager.conferenceView];
     
-    [self presentViewController:videoVC animated:NO completion:nil];
+    [self presentViewController:self.videoVC animated:NO completion:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(deallocAAAA:) name:@"aaaa" object:nil];
+}
+
+- (void)deallocAAAA:(NSNotification *)sender {
 }
 
 - (void)receiveMessage:(NSDictionary *)message {
@@ -90,6 +97,21 @@
     NSLog(@"本地参会者改变 --- %@",localParticipant);
 }
 
+- (void)conferenceConncted:(ZJSDKCallState)nCode {
+    NSLog(@"本地参会者连接会议成功 ");
+}
+
+- (void)conferenceRecoderOpen:(BOOL)open successful:(BOOL)success{
+    NSLog(@"%@录制%@", ( open ? @"开启" : @"关闭" ),success ? @"成功":@"失败");
+}
+
+- (void)audioInterruptionBegan {
+    NSLog(@"被其他程序占用音频 - began");
+}
+
+- (void)audioInterruptionEndedAnTime:(NSTimeInterval)timeInterval {
+    NSLog(@"其他程序占用音频结束 - end 占用时间%f",timeInterval);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

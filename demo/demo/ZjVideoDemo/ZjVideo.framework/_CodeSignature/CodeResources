@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/NSMutableDictionary+ZJSDKVideo.h</key>
 		<data>
-		QKf4E7/ui06zGhTukz3zr87RMjE=
+		qtLG21kg8LL1Sp2+B5+bHXEJWY4=
 		</data>
 		<key>Headers/RCTAnimation/RCTAdditionAnimatedNode.h</key>
 		<data>
@@ -574,15 +574,15 @@
 		</data>
 		<key>Headers/ZJSDKTypeDefine.h</key>
 		<data>
-		1rTjB7nFzt0lVnPTXBR5ny67elQ=
+		ljevSrOEtrIFNCC+YgglyfQ/PPU=
 		</data>
 		<key>Headers/ZJVideoManagerDelegate.h</key>
 		<data>
-		GBTqtOq3zHd/mbKZhAhoqJo3ocw=
+		03sxWtWGqWGc9SUBQdhPhUwLEV4=
 		</data>
 		<key>Headers/ZjRCTManager.h</key>
 		<data>
-		xvi+r13UFFKVr8yl5xdTeayXdCE=
+		l44NWB2XEOiEn416+hdrVf1pV54=
 		</data>
 		<key>Headers/ZjVideo.h</key>
 		<data>
@@ -614,7 +614,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WJJXbaf/pjnEk9zYMuqPgNWR7wU=
+		3s4W1UpZ0jFUCmhlaxVB7TdVfMw=
 		</data>
 		<key>MaterialIcons.ttf</key>
 		<data>
@@ -781,6 +781,18 @@
 		<key>assets/rnapp/Images/panbottom.png</key>
 		<data>
 		8NzlPkRieP6VYiJB18hr4prphK8=
+		</data>
+		<key>assets/rnapp/Views/ConferenceModel/auto_1.png</key>
+		<data>
+		i/WsyfpjqV6/dlZ/c2dGTDPiQkw=
+		</data>
+		<key>assets/rnapp/Views/ConferenceModel/auto_2.png</key>
+		<data>
+		Sla5pewLNB/MhbTlYnIkefBlp+c=
+		</data>
+		<key>assets/rnapp/Views/ConferenceModel/auto_3.png</key>
+		<data>
+		FZcEmLd4FIcOPirzzys0w+BmmKQ=
 		</data>
 		<key>assets/rnapp/Views/bar-items/Images/0pan.png</key>
 		<data>
@@ -994,6 +1006,18 @@
 		<data>
 		Gfny1dt3LKDQyo3kbKBBCkqTF0g=
 		</data>
+		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/auto_1.png</key>
+		<data>
+		i/WsyfpjqV6/dlZ/c2dGTDPiQkw=
+		</data>
+		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/auto_2.png</key>
+		<data>
+		Sla5pewLNB/MhbTlYnIkefBlp+c=
+		</data>
+		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/auto_3.png</key>
+		<data>
+		FZcEmLd4FIcOPirzzys0w+BmmKQ=
+		</data>
 		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/icon_mine.png</key>
 		<data>
 		OGCTsS5Vh4pJVBnEDkC9KRI4rZQ=
@@ -1008,7 +1032,7 @@
 		</data>
 		<key>main.jsbundle</key>
 		<data>
-		GEVqL4/YPeoeq85YEIo839BPShI=
+		kiEsfDKLBXH0qSISa58R9+ywNcg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -1028,11 +1052,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QKf4E7/ui06zGhTukz3zr87RMjE=
+			qtLG21kg8LL1Sp2+B5+bHXEJWY4=
 			</data>
 			<key>hash2</key>
 			<data>
-			MFucvPdjbAvu2a9T2QRoIxOuXKE+q7nlcNc0tV+YeM8=
+			jNHFkRzvbhfxABTu4YqKWjdoC9qG4IT9N2qI5EvBpCY=
 			</data>
 		</dict>
 		<key>Headers/RCTAnimation/RCTAdditionAnimatedNode.h</key>
@@ -2579,33 +2603,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1rTjB7nFzt0lVnPTXBR5ny67elQ=
+			ljevSrOEtrIFNCC+YgglyfQ/PPU=
 			</data>
 			<key>hash2</key>
 			<data>
-			fgj9xvzTqGNDPkyNqudKahOe3A5DFGFbiEDTu5vqy3w=
+			I6voSpo00oHM58QrKe1gwfaXE08m+TojIuy0Cfae4RM=
 			</data>
 		</dict>
 		<key>Headers/ZJVideoManagerDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GBTqtOq3zHd/mbKZhAhoqJo3ocw=
+			03sxWtWGqWGc9SUBQdhPhUwLEV4=
 			</data>
 			<key>hash2</key>
 			<data>
-			R96MhZqUMEYj6jTSdjuC+kA02k8UEuLXB5gUa9hh0Kc=
+			01HlllSTYbs5jA4hplufe7h6r2DAqDaQTegMPOgj7TM=
 			</data>
 		</dict>
 		<key>Headers/ZjRCTManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xvi+r13UFFKVr8yl5xdTeayXdCE=
+			l44NWB2XEOiEn416+hdrVf1pV54=
 			</data>
 			<key>hash2</key>
 			<data>
-			zGDwJLnzUL5RsEn/6aSlXzr013BEtCkVTPHf/1iyJm0=
+			QSK8zrSDfgw10Bc7w4djXqWq4bFEcM4EHxIOInycayI=
 			</data>
 		</dict>
 		<key>Headers/ZjVideo.h</key>
@@ -3116,6 +3140,39 @@
 			<key>hash2</key>
 			<data>
 			RFWmBscsrB4Qjhjcr1ERFaZ4ricCB0hCNysv7MtQdas=
+			</data>
+		</dict>
+		<key>assets/rnapp/Views/ConferenceModel/auto_1.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			i/WsyfpjqV6/dlZ/c2dGTDPiQkw=
+			</data>
+			<key>hash2</key>
+			<data>
+			8Umnii7O57bYOemmheygzXY1szlzvWlKehxhHGusU4g=
+			</data>
+		</dict>
+		<key>assets/rnapp/Views/ConferenceModel/auto_2.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Sla5pewLNB/MhbTlYnIkefBlp+c=
+			</data>
+			<key>hash2</key>
+			<data>
+			fsJk8SI538qMhQ9BkNMKefhsWR8LMBcXY2FUCdIndyE=
+			</data>
+		</dict>
+		<key>assets/rnapp/Views/ConferenceModel/auto_3.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FZcEmLd4FIcOPirzzys0w+BmmKQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			6vPGXTqpBJINXfdpmEk31YSRlFf+Hn9qQNnXX7WlsWQ=
 			</data>
 		</dict>
 		<key>assets/rnapp/Views/bar-items/Images/0pan.png</key>
@@ -3701,6 +3758,39 @@
 			GiknYH8cJ3hKCTVcfb2cUlgA05YpTBm8/msmKlmfuso=
 			</data>
 		</dict>
+		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/auto_1.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			i/WsyfpjqV6/dlZ/c2dGTDPiQkw=
+			</data>
+			<key>hash2</key>
+			<data>
+			8Umnii7O57bYOemmheygzXY1szlzvWlKehxhHGusU4g=
+			</data>
+		</dict>
+		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/auto_2.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Sla5pewLNB/MhbTlYnIkefBlp+c=
+			</data>
+			<key>hash2</key>
+			<data>
+			fsJk8SI538qMhQ9BkNMKefhsWR8LMBcXY2FUCdIndyE=
+			</data>
+		</dict>
+		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/auto_3.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FZcEmLd4FIcOPirzzys0w+BmmKQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			6vPGXTqpBJINXfdpmEk31YSRlFf+Hn9qQNnXX7WlsWQ=
+			</data>
+		</dict>
 		<key>assets/rnapp/Views/videos/simulcastVideo/layouts/icon_mine.png</key>
 		<dict>
 			<key>hash</key>
@@ -3738,11 +3828,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GEVqL4/YPeoeq85YEIo839BPShI=
+			kiEsfDKLBXH0qSISa58R9+ywNcg=
 			</data>
 			<key>hash2</key>
 			<data>
-			0Dh4MZbJzViiKn01nEXH+CXJp5ooenP/cdPLzxe9Emw=
+			VKgmwiyZJ6NMmtYKTBoIM/XINGe8JukyOXJr64++V+A=
 			</data>
 		</dict>
 	</dict>

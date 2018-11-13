@@ -21,7 +21,8 @@ typedef NS_ENUM (NSUInteger, ZJSDKCallState){
   ZjCallStateMute    =  3,         /** < 视频被静音 >  **/
   ZjCallHappenError  =  4,         /** < 视频通话过程中出现的错误 > **/
   ZjCallObtainUUID   =  5,         /** < 第一次获得uuid > **/
-  ZjCallNetworkChange=  6          /** < 网络发生改变 > **/
+  ZjCallNetworkChange=  6,         /** < 网络发生改变 > **/
+  ZjCallRegisterAccountFaild = 7,  /** < 注册账号到mcu失败 > **/
 };
 
 typedef NS_ENUM(NSUInteger, ZJAVCallGear){
